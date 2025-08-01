@@ -21,7 +21,7 @@ export const Blogs = () => {
       <div>
         <Appbar />
         <div className="mt-20 flex justify-center">
-          <div className="max-w-2xl w-full">
+          <div className="max-w-2xl w-full px-4 sm:px-0">
             <BlogSkeleton />
             <BlogSkeleton />
             <BlogSkeleton />
@@ -35,12 +35,12 @@ export const Blogs = () => {
   return (
     <>
       <Appbar />
-      <h1 className="flex justify-center border-b-1 text-2xl pt-3 font-extralight">
+      <h1 className="flex justify-center border-b-1 text-xl sm:text-2xl pt-3 font-extralight px-4">
         Discover Blogs
       </h1>
-      <div className="mt-3 mb-3 ml-[29rem] border max-w-xl"></div>
+      <div className="mt-3 mb-3 mx-4 sm:ml-[29rem] border max-w-xl"></div>
       <div className="flex justify-center">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl w-full px-4 sm:px-0">
           {blogs.map((blog, index) => (
             <BlogCard
               key={index}

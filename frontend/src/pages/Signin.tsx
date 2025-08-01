@@ -4,15 +4,15 @@ import logo from "../assets/medium.png"
 
 export const Signin = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2">
-      <div>
-        <div className="flex gap-2 items-center">
-        <img className="w-8 h-8 mt-2 ml-2" src={logo} alt="" />
-          <span className="text-2xl font-bold font-mono mt-2">Medium</span>
+    <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
+      <div className="order-2 lg:order-1">
+        <div className="flex gap-2 items-center px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6">
+          <img className="w-6 h-6 sm:w-8 sm:h-8 mt-2" src={logo} alt="" />
+          <span className="text-xl sm:text-2xl font-bold font-mono mt-2">Medium</span>
         </div>
         <Auth type="signin" />
       </div>
-      <div>
+      <div className="order-1 lg:order-2">
         <Quote />
       </div>
     </div>

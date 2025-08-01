@@ -17,17 +17,17 @@ export const BlogCard = ({
 }: BlogCardProps) => {
   return (
     <Link to={`/blog/${id}`}>
-      <div className="p-4 border-b-[0.01rem] pb-3 border-gray-300 cursor-pointer">
-        <div className="flex gap-2 items-center">
+      <div className="p-3 sm:p-4 border-b-[0.01rem] pb-3 border-gray-300 cursor-pointer">
+        <div className="flex gap-2 items-center flex-wrap">
           <Avatar size={"small"} name={authorName} />
-          <div className="font-normal text-sm">{authorName}</div>
+          <div className="font-normal text-xs sm:text-sm">{authorName}</div>
           <div className="text-xs text-slate-600">&bull;</div>
           <div className="font-thin text-xs text-slate-500">
             {publishedDate}
           </div>
         </div>
-        <div className="text-xl font-bold pt-2">{title}</div>
-        <div className="font-light text-md">
+        <div className="text-lg sm:text-xl font-bold pt-2">{title}</div>
+        <div className="font-light text-sm sm:text-md">
           {content.slice(0, 250)}{content.length>250?"...":""}
         </div>
         <div className="text-slate-500 text-xs font-thin pt-2">{`${Math.ceil(

@@ -5,20 +5,20 @@ import { Avatar } from "./BlogCard";
 export const Appbar = () => {
   const navigate = useNavigate();
   return (
-    <div className="border-b-2 py-1 border-gray-200 px-10 flex justify-between ">
-      <div className="flex items-center gap-4">
+    <div className="border-b-2 py-1 border-gray-200 px-4 sm:px-10 flex flex-col sm:flex-row justify-between items-center">
+      <div className="flex items-center gap-4 mb-2 sm:mb-0">
         <Link to="/blogs">
           <img className="w-9 h-9 cursor-pointer" src={mediumlogo} alt="" />
         </Link>
         <div className="text-xl font-bold">Medium</div>
       </div>
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2 sm:gap-3 flex-wrap justify-center">
         <button
           onClick={() => {
             localStorage.removeItem("token");
             navigate("/signin");
           }}
-          className="relative px-5 h-7 w-28 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group"
+          className="relative px-3 sm:px-5 h-7 w-20 sm:w-28 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group text-xs sm:text-sm"
         >
           <span className="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"></span>
           <span className="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"></span>
@@ -33,7 +33,7 @@ export const Appbar = () => {
           onClick={() => {
             navigate("/publish");
           }}
-          className="relative mr-2 px-5 h-7 w-28 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group"
+          className="relative mr-0 sm:mr-2 px-3 sm:px-5 h-7 w-20 sm:w-28 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group text-xs sm:text-sm"
         >
           <span className="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-green-600 group-hover:w-full ease"></span>
           <span className="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-green-600 group-hover:w-full ease"></span>
